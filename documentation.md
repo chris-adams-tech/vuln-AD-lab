@@ -79,15 +79,15 @@ As of right now, this is only including the Active Directory and Wazuh build alo
 
 2.**Choose ‘Custom: Install Microsoft Server Operating System’**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/04e883be-4dfc-47c4-92b8-d7ca0a1774b2/Untitled.png)
+![alt text](image-1.png)
 
 1. **Select the ‘Unallocated’ drive**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/0920fde8-0543-4b22-8db4-09c0ed18cfd4/Untitled.png)
+![alt text](image-2.png)
 
 4.**Change the name of the Computer** 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/35821ea8-fd57-424e-bc93-4f8d6c40b922/Untitled.png)
+![alt text](image-3.png)
 
 (Reboot needed)
 
@@ -133,9 +133,7 @@ As of right now, this is only including the Active Directory and Wazuh build alo
 4. The server will then reboot and the next login should be with the domain level domain\user.
 
 <aside>
-💡
-
-This could also be done through an SSH connection and just run the scripts via PuTTy or a terminal window. I did not because OpenSSH does not play nicely from a Linux KVM to Windows machine.
+💡 This could also be done through an SSH connection and just run the scripts via PuTTy or a terminal window. I did not because OpenSSH does not play nicely from a Linux KVM to Windows machine.
 
 </aside>
 
@@ -152,18 +150,18 @@ This could also be done through an SSH connection and just run the scripts via P
 
 Check out the ruleset here: https://github.com/SwiftOnSecurity/sysmon-config 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/6327088d-00cb-4de5-a8c6-21896e44babf/Untitled.png)
+![alt text](image-4.png)
 
 1. Download the raw xml file in the files below the README.md
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/08121850-49f2-4e61-abc7-6c889aef0491/Untitled.png)
+  ![alt text](image-5.png)
     
 
 1. Now, download Sysmon from Windows
     
     https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/3175fcb1-72cf-418a-ba5a-a34d8dd8ed9e/Untitled.png)
+   ![alt text](image-6.png)
     
 2. Extract the packages from the Sysmon download
 
@@ -185,19 +183,17 @@ Check out the ruleset here: https://github.com/SwiftOnSecurity/sysmon-config
 ### Enable PowerShell Module Logging and other GPO settings
 
 <aside>
-💡
-
-The PowerShell Module logging, along with other logging settings, will allow us to capture the full output of the scripts that are being run. Of course, it will be captured on the local machine, then forwarded via Powershell logs to Wazuh.
+💡 The PowerShell Module logging, along with other logging settings, will allow us to capture the full output of the scripts that are being run. Of course, it will be captured on the local machine, then forwarded via Powershell logs to Wazuh.
 
 </aside>
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/4affba03-31d8-4706-816b-42f770273185/Untitled.png)
+![alt text](image-7.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/c4e6a25e-7c37-4f9b-a9d7-895f6d18678e/Untitled.png)
+![alt text](image-8.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/53bb2eb1-d768-4847-aa9d-15f31e04c291/Untitled.png)
+![alt text](image-9.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/a0c50b29-d736-4af1-9b38-72482fc5a85d/Untitled.png)
+![alt text](image-10.png)
 
 <aside>
 ℹ️ This will create a text file of the Powershell transcript to verify that the logs are being received in the intended manner.
@@ -221,23 +217,21 @@ The PowerShell Module logging, along with other logging settings, will allow us 
     
     In the screenshot below are the types of attacks that can be implemented in this lab environment. These may be adjusted by going into the `vulnadplus.ps1` script BEFORE running to adjust to your purposes.
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/52cdec3d-6e46-46cd-94ca-e2655bc94192/Untitled.png)
+   ![alt text](image-11.png)
     
 2. Open the PowerShell file with notepad to adjust the domain name and number of desired users
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/95a6c4b8-3af8-4948-81ef-403547ce3e93/Untitled.png)
+    ![alt text](image-12.png)
     
 
 <aside>
-💡
-
-Changing the domain name is a crucial step! I also do not recommend using 100 users to start out. Keep it simple at first, then expand from there.
+💡 Changing the domain name is a crucial step! I also do not recommend using 100 users to start out. Keep it simple at first, then expand from there.
 
 </aside>
 
-1. Before running the script, we want to ensure there is no connectivity to the internet and the DNS is set to it’s own IP address, or loopback `127.0.0.1`. 
+1. Before running the script, we want to ensure there is no connectivity to the internet if not done so already and the DNS is set to it’s own IP address, or loopback `127.0.0.1`. 
     
-    **Set your network on this device to ‘isolated’ so it is disconnected from NAT**
+    **Set your network on this device to ‘isolated’ so it is disconnected from NAT or anything outside of the subnet.**
     
 2. Open PowerShell and run the edited PowerShell script
     
@@ -249,9 +243,7 @@ Changing the domain name is a crucial step! I also do not recommend using 100 us
     The output will look like below:
     
     <aside>
-    ℹ️
-    
-    The usernames are randomized fyi
+    ℹ️ The usernames are randomized fyi
     
     </aside>
     
@@ -263,9 +255,7 @@ Changing the domain name is a crucial step! I also do not recommend using 100 us
     
 
 <aside>
-💡
-
-Another option would be to download the files, scripts, then create a file share, in my case using *samba,* to the VM in order to not have the host connected to the internet at all. 
+💡 Another option would be to download the files, scripts, then put on a USB drive and redirect the USB drive to the virtual machine. Alternatively, this could be done via Samba/SMB share.
 
 </aside>
 
@@ -316,9 +306,7 @@ Browser compatibibility:
 1. Begin by connecting or opening an SSH connection into your virtual machine.
 
 <aside>
-ℹ️
-
-For password-less SSH connection, on your host machine run `ssh-keygen -t ed25519` to generate an SSH key. Then, run `ssh-copy-id <vm-user>@<vm-ip>`. There should be a prompt to enter your VM user password. Verify that you are able to connect, then you are able to run the commands from your host machine via an SSH connection.
+💡 For password-less SSH connection, on your host machine run `ssh-keygen -t ed25519` to generate an SSH key. Then, run `ssh-copy-id <vm-user>@<vm-ip>`. There should be a prompt to enter your VM user password. Verify that you are able to connect, then you are able to run the commands from your host machine via an SSH connection.
 
 </aside>
 
@@ -328,46 +316,44 @@ Wazuh can easily installed by using the installation assistant by using the scri
 curl -sO https://packages.wazuh.com/4.8/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/cb6f89a2-0a69-43a6-8132-289183d8e499/image.png)
+![alt text](image-13.png)
 
 The output will look similar to below:
 
 1. Once finished, the password will be displayed in the output.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/a9fb82fe-2f92-42a2-88fb-f1faef5ac54d/image.png)
+![alt text](image-14.png)
 
 1. To access the web interface, go to `https://<wazuh-dashboard-ip>` on your host machine, using the credentials from the output in the last step.
 
 There will be a notice that “Your connection is not private” and is expected. Click **Advanced** and **Proceed to *<wazuh-ip>* (unsafe)**
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/e1ae3ff2-c225-467a-a394-732f5ba3804e/image.png)
+![alt text](image-15.png)
 
 Then, a login screen will appear, where you can enter in the credentials **“admin**” and the password that was generated with the installation.
 
 <aside>
-ℹ️
-
 This password can be changed but requires a few steps to sync the API and other backend passwords.
 
 </aside>
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/e8854f52-d3e5-49c3-9467-5a522f6f2f71/image.png)
+![alt text](image-16.png)
 
 After entering the correct credentials, there will be some checks to ensure that everything was configured correctly on the backend
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/066a0203-d6f3-4e76-a8f5-e82485d6a179/image.png)
+![alt text](image-17.png)
 
 Once connected, you should have landed on a page like this:
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/90594eb5-6185-40f1-973b-872b44968523/image.png)
+![alt text](image-18.png)
 
 1. Once on the web interface, add an agent from the Overview page on the Wazuh dashboard
     
     Click the “Add agent” 
     
-    ![add-agent.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/ab2be8a6-9f7a-47a0-ab1c-fc3f54d46362/add-agent.png)
+    ![alt text](image-19.png)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/1861ebc3-d15c-4524-9e26-293afcc2da71/Untitled.png)
+    ![alt text](image-20.png)
     
 
 *This will allow you to generate a agent deploy script for your Active Directory domain controller* 
@@ -494,7 +480,7 @@ Within these rule sets, the field names that are captured from the logs can be u
 
 </aside>
 
-Below is the ruleset we used for the environment in the red/blue team village
+Below is the ruleset that was used in this setup.
 
 ```xml
 <group name="security_event, windows,">
@@ -660,6 +646,8 @@ I had some additional rulesets implemented, then unfortunately had to snapshot a
 2. Scroll down to the **Dashboard management** > **Security**
 3. 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/e3b16d60-e710-4a49-815c-3802f9f50af2/Untitled.png)
+![alt text](image-21.png)
 
 ## Removing an agent from the Wazuh manager
+
+![alt text](image-22.png)
