@@ -238,21 +238,11 @@ Check out the ruleset here: https://github.com/SwiftOnSecurity/sysmon-config
     ```powershell
     PS C:\Users\Administrator> 
     Import-Module .\vulnadplus.ps1
-    ```
-    
-    The output will look like below:
-    
+    ```    
     <aside>
     ℹ️ The usernames are randomized fyi
     
     </aside>
-    
-    ![vulnusers.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/55f29125-b9ec-428b-960a-16dbf6de6190/vulnusers.png)
-    
-    ![vulnusers 2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/680968c8-9124-4de2-be19-5a6d2d1cd68f/vulnusers_2.png)
-    
-    ![badacl.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dff01248-f3b8-434c-8ab8-628d8431c26a/aca2e1aa-cc54-4f53-bca2-939f67ef6072/badacl.png)
-    
 
 <aside>
 💡 Another option would be to download the files, scripts, then put on a USB drive and redirect the USB drive to the virtual machine. Alternatively, this could be done via Samba/SMB share.
@@ -306,7 +296,7 @@ Browser compatibibility:
 1. Begin by connecting or opening an SSH connection into your virtual machine.
 
 <aside>
-💡 For password-less SSH connection, on your host machine run `ssh-keygen -t ed25519` to generate an SSH key. Then, run `ssh-copy-id <vm-user>@<vm-ip>`. There should be a prompt to enter your VM user password. Verify that you are able to connect, then you are able to run the commands from your host machine via an SSH connection.
+For password-less SSH connection, on your host machine run `ssh-keygen -t ed25519` to generate an SSH key. Then, run `ssh-copy-id <vm-user>@<vm-ip>`. There should be a prompt to enter your VM user password. Verify that you are able to connect, then you are able to run the commands from your host machine via an SSH connection.
 
 </aside>
 
@@ -333,7 +323,7 @@ There will be a notice that “Your connection is not private” and is expected
 Then, a login screen will appear, where you can enter in the credentials **“admin**” and the password that was generated with the installation.
 
 <aside>
-This password can be changed but requires a few steps to sync the API and other backend passwords.
+*This password can be changed but requires a few steps to sync the API and other backend passwords.*
 
 </aside>
 
@@ -398,7 +388,7 @@ Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.8.0-
     ```
     
     <aside>
-    💡 Additional event channels can also be added by using the format below, :
+    Additional event channels can also be added by using the format below, :
     
     ```
     <localfile>
