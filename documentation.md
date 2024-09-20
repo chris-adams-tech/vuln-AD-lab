@@ -1,4 +1,4 @@
-# Secretcon Active Directory server build (WIP)
+# Secretcon Active Directory server build
 
 Writeup and Active Directory build by: Chris Adams
 
@@ -6,12 +6,6 @@ LinkedIn: [www.linkedin.com/in/christoph-adams](https://www.linkedin.com/christo
 
 Website: https://chris-adams.notion.site  
 
-<aside>
-ℹ️ This is the final write-up from the lab below
-
-[Vulnerable AD Lab](https://www.notion.so/Vulnerable-AD-Lab-a32871e4818148dba9398b8387a9cd40?pvs=21)
-
-</aside>
 
 ---
 
@@ -40,7 +34,7 @@ Some of the build was based off of work by Joas A Santos. Here is a link to his 
 My home lab set up was originally built on Qemu/KVM then we implemented the actual build into Proxmox.
 
 <aside>
-ℹ️ As of right now, this is only including the Active Directory and Wazuh build along with their respective rulesets.
+As of right now, this is only including the Active Directory and Wazuh build along with their respective rulesets.
 
 </aside>
 
@@ -81,7 +75,7 @@ My home lab set up was originally built on Qemu/KVM then we implemented the actu
 
 1.**Choose Windows Server 2022 Standard Evaluation (Desktop Experience)**
 
-
+![alt text](image.png)
 
 2.**Choose ‘Custom: Install Microsoft Server Operating System’**
 
