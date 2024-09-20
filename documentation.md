@@ -79,15 +79,15 @@ As of right now, this is only including the Active Directory and Wazuh build alo
 
 2.**Choose ‘Custom: Install Microsoft Server Operating System’**
 
-![alt text](image-1.png)
+![alt text](./pictures/image-1.png)
 
 1. **Select the ‘Unallocated’ drive**
 
-![alt text](image-2.png)
+![alt text](./pictures/image-2.png)
 
 4.**Change the name of the Computer** 
 
-![alt text](image-3.png)
+![alt text](./pictures/image-3.png)
 
 (Reboot needed)
 
@@ -150,18 +150,18 @@ As of right now, this is only including the Active Directory and Wazuh build alo
 
 Check out the ruleset here: https://github.com/SwiftOnSecurity/sysmon-config 
 
-![alt text](image-4.png)
+![alt text](./pictures/image-4.png)
 
 1. Download the raw xml file in the files below the README.md
     
-  ![alt text](image-5.png)
+  ![alt text](./pictures/image-5.png)
     
 
 1. Now, download Sysmon from Windows
     
     https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
     
-   ![alt text](image-6.png)
+   ![alt text](./pictures/image-6.png)
     
 2. Extract the packages from the Sysmon download
 
@@ -187,13 +187,13 @@ Check out the ruleset here: https://github.com/SwiftOnSecurity/sysmon-config
 
 </aside>
 
-![alt text](image-7.png)
+![alt text](./pictures/image-7.png)
 
-![alt text](image-8.png)
+![alt text](./pictures/image-8.png)
 
-![alt text](image-9.png)
+![alt text](./pictures/image-9.png)
 
-![alt text](image-10.png)
+![alt text](./pictures/image-10.png)
 
 <aside>
 ℹ️ This will create a text file of the Powershell transcript to verify that the logs are being received in the intended manner.
@@ -217,11 +217,11 @@ Check out the ruleset here: https://github.com/SwiftOnSecurity/sysmon-config
     
     In the screenshot below are the types of attacks that can be implemented in this lab environment. These may be adjusted by going into the `vulnadplus.ps1` script BEFORE running to adjust to your purposes.
     
-   ![alt text](image-11.png)
+   ![alt text](./pictures/image-11.png)
     
 2. Open the PowerShell file with notepad to adjust the domain name and number of desired users
     
-    ![alt text](image-12.png)
+    ![alt text](./pictures/image-12.png)
     
 
 <aside>
@@ -316,19 +316,19 @@ Wazuh can easily installed by using the installation assistant by using the scri
 curl -sO https://packages.wazuh.com/4.8/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
 
-![alt text](image-13.png)
+![alt text](./pictures/image-13.png)
 
 The output will look similar to below:
 
 1. Once finished, the password will be displayed in the output.
 
-![alt text](image-14.png)
+![alt text](./pictures/image-14.png)
 
 1. To access the web interface, go to `https://<wazuh-dashboard-ip>` on your host machine, using the credentials from the output in the last step.
 
 There will be a notice that “Your connection is not private” and is expected. Click **Advanced** and **Proceed to *<wazuh-ip>* (unsafe)**
 
-![alt text](image-15.png)
+![alt text](./pictures/image-15.png)
 
 Then, a login screen will appear, where you can enter in the credentials **“admin**” and the password that was generated with the installation.
 
@@ -337,23 +337,23 @@ This password can be changed but requires a few steps to sync the API and other 
 
 </aside>
 
-![alt text](image-16.png)
+![alt text](./pictures/image-16.png)
 
 After entering the correct credentials, there will be some checks to ensure that everything was configured correctly on the backend
 
-![alt text](image-17.png)
+![alt text](./pictures/image-17.png)
 
 Once connected, you should have landed on a page like this:
 
-![alt text](image-18.png)
+![alt text](./pictures/image-18.png)
 
 1. Once on the web interface, add an agent from the Overview page on the Wazuh dashboard
     
     Click the “Add agent” 
     
-    ![alt text](image-19.png)
+    ![alt text](./pictures/image-19.png)
     
-    ![alt text](image-20.png)
+    ![alt text](./pictures/image-20.png)
     
 
 *This will allow you to generate a agent deploy script for your Active Directory domain controller* 
@@ -646,8 +646,8 @@ I had some additional rulesets implemented, then unfortunately had to snapshot a
 2. Scroll down to the **Dashboard management** > **Security**
 3. 
 
-![alt text](image-21.png)
+![alt text](./pictures/image-21.png)
 
 ## Removing an agent from the Wazuh manager
 
-![alt text](image-22.png)
+![alt text](./pictures/image-22.png)
