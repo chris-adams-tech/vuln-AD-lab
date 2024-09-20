@@ -75,7 +75,7 @@ As of right now, this is only including the Active Directory and Wazuh build alo
 
 1.**Choose Windows Server 2022 Standard Evaluation (Desktop Experience)**
 
-![alt text](src="./pictures/image.png)
+![alt text](./pictures/image.png)
 
 2.**Choose ‘Custom: Install Microsoft Server Operating System’**
 
