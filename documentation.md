@@ -13,7 +13,7 @@ Website: https://chris-adams.notion.site
 
 ---
 
-This project came about by attending the first Secretcon in Minneapolis, Mn, then getting an opportunity with a team to create the Red/Blue Team village. The initial build was based off of a vulnerable AD ******GitHub lab, originally by **safebuffer** https://github.com/safebuffer/vulnerable-AD. I, by no means take any credit for the scripts written in these documents, I merely put pieces together of something that was already created, with hopes to learn from it and continue to expand on it. With that being said, I hope you learn something and can build this on your own, then expand on it as I will continue to.
+This project came about by attending the first Secretcon in Minneapolis, Mn, then getting an opportunity with a team to create the Red/Blue Team village. The initial build was based off of a vulnerable AD Water Execution GitHub lab, originally by **safebuffer** https://github.com/safebuffer/vulnerable-AD. I, by no means take any credit for the scripts written in these documents, I merely put pieces together of something that was already created, with hopes to learn from it and continue to expand on it. With that being said, I hope you learn something and can build this on your own, then expand on it as I will continue to.
 
 Some of the build was based off of work by Joas A Santos. Here is a link to his build: 
 
