@@ -75,7 +75,7 @@ As of right now, this is only including the Active Directory and Wazuh build alo
 
 1.**Choose Windows Server 2022 Standard Evaluation (Desktop Experience)**
 
-![alt text](.github\attachments\image.png)
+![alt text](C:\Users\errday\Documents\GitHub\vuln-AD-lab\.github\attachments\image.png)
 
 2.**Choose ‘Custom: Install Microsoft Server Operating System’**
 
